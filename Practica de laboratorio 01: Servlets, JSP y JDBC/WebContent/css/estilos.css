@@ -1,0 +1,14 @@
+body {
+    height: 50vh;
+    background: url("https://www.elsetge.cat/myimg/f/13-138446_fondos-hd-paisajes-desenfocados.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin-bottom:2em;
+}
+
+.container{
+	background: rgb(0, 0, 0, .4); 
+	border-radius: 10px;
+	margin-top: 25px; 
+}

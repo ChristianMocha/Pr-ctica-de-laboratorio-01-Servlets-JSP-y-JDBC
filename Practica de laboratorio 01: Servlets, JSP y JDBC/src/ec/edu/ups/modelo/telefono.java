@@ -1,6 +1,8 @@
 package ec.edu.ups.modelo;
 
 import java.io.Serializable;
+import java.util.List;
+
 
 public class telefono implements Serializable {
 
@@ -9,6 +11,8 @@ public class telefono implements Serializable {
 	private String numero;
 	private String tipo;
 	private String operadora;
+	private user user;
+	
 	
 	public telefono() {
 
@@ -18,7 +22,7 @@ public class telefono implements Serializable {
 	
 	
 	public telefono(int codigo, String numero, String tipo, String operadora) {
-		super();
+		
 		this.codigo = codigo;
 		this.numero = numero;
 		this.tipo = tipo;
@@ -51,6 +55,24 @@ public class telefono implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+	
+	
+
+
+	public user getUser() {
+		return user;
+	}
+
+
+
+
+	public void setUser(user user) {
+		this.user = user;
+	}
+
+
+
+
 	@Override
 	public String toString() {
 		return "telefono [codigo=" + codigo + ", numero=" + numero + ", tipo=" + tipo + ", operadora=" + operadora

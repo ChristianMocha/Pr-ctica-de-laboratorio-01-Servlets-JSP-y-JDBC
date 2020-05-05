@@ -24,7 +24,11 @@
 
 
 <div class="container col-lg-4">
-	<form action="login" method="post" >
+	<form action="/Practica_de_laboratorio_01_Servlets_JSP_y_JDBC/crearCuenta" method="post">
+	<!-- /Practica_de_laboratorio_01_Servlets_JSP_y_JDBC/Registro -->
+	
+	<input class="form-control" type="hidden" name="registro" value="registro" >
+	
 		<div class="form-group text-center">
 			<img src="../img/2.png" height="80" width="80"/>
 			<p><strong>Create Account</strong></p>
@@ -34,7 +38,7 @@
 		<div class="form-group">
 			<label>Cedula:</label>
 			<i class="fas fa-user input-prefix"></i>
-			<input class="form-control" type="text" name="txtcedula" placeholder="Cedula">
+			<input class="form-control" type="text" name="cedula" placeholder="Cedula">
 		</div>
 		
 		
@@ -42,25 +46,25 @@
 			 <div class="col">
 				<!-- First name -->
 		        <label>Nombre:</label>
-		        <input type="text" id="defaultRegisterFormFirstName" name="txtnombre" class="form-control" placeholder="First name">
+		        <input type="text" id="defaultRegisterFormFirstName" name="nombre" class="form-control" placeholder="First name">
 			 </div>
 		     <div class="col">
 		        <!-- Last name -->
 		        <label>Apellido:</label>
-		        <input type="text" id="defaultRegisterFormLastName" name="txtapellido" class="form-control" placeholder="Last name">
+		        <input type="text" id="defaultRegisterFormLastName" name="apellido" class="form-control" placeholder="Last name">
 		     </div>
 		  </div>
 		  
 		  	
 		<div class="form-group">
 			<label>E-mail:</label>
-			<input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" name="txtE-mail" placeholder="E-mail">
+			<input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" name="email" placeholder="E-mail">
 		</div>
 		
 		
 		<div class="form-group">
 			<label>Password:</label>
-			<input type="password" id="defaultLoginFormPassword" class="form-control mb-4"  name="txtpassw" placeholder="Password">
+			<input type="password" id="defaultLoginFormPassword" class="form-control mb-4"  name="passw" placeholder="Password">
 		</div>
 		<input class="btn btn-danger btn-block" type="submit" name="accion" value="Sign up">
 		

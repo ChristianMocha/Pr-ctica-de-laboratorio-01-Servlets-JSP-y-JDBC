@@ -5,7 +5,6 @@ import ec.edu.ups.mysql.jdbc.JDBCTelefonoDAO;
 import ec.edu.ups.mysql.jdbc.JDBCUserDAO;
 
 
-
 public class JDBCDAOFactory extends DAOFactory {
 
 	@Override

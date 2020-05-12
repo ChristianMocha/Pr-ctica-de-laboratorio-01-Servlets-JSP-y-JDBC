@@ -35,10 +35,13 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 	
   ```
 
-2. Al momento que se  crea el usuario, nos redirecciona a la interfaz del login.
 
 
 <img width="1280" alt="Screen Shot 2020-05-11 at 21 52 11" src="https://user-images.githubusercontent.com/34308608/81633153-adb52800-93d1-11ea-936f-ed11edfe255c.png">
+
+
+
+2. Al momento que se  crea el usuario, nos redirecciona a la interfaz del login.
 
 
 - En este caso para poder iniciar sesion necesitamos pasar el correo asi como la contraseña, en este mismo metodo estamos aplicando un filtro para el logueo, que la aplicación tenga seguridad.

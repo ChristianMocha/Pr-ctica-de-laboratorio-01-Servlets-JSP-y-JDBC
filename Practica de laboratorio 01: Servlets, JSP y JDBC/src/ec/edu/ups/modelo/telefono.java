@@ -21,9 +21,9 @@ public class telefono implements Serializable {
 	
 	
 	
-	public telefono(int codigo, String numero, String tipo, String operadora) {
+	public telefono(String numero, String tipo, String operadora) {
 		
-		this.codigo = codigo;
+		
 		this.numero = numero;
 		this.tipo = tipo;
 		this.operadora = operadora;

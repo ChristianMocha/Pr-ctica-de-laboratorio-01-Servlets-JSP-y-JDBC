@@ -7,13 +7,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import ec.edu.ups.dao.DAOFactory;
+import ec.edu.ups.dao.DaoTelefono;
 import ec.edu.ups.dao.DaoUsuario;
+import ec.edu.ups.modelo.telefono;
 import ec.edu.ups.modelo.user;
 
 /**
  * Servlet implementation class Agenda
  */
 @WebServlet("/Agenda")
+
 public class Agenda extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -30,17 +33,35 @@ public class Agenda extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-	    DaoUsuario userDao = DAOFactory.getFactory().getUsuarioDAO();
-        user user = userDao.findById(String.valueOf(request.getSession().getAttribute("userID")));
+		
+		String sesion=request.getParameter("logout");
+		String buscarNumero = request.getParameter("buscarNumero");
+		if(sesion != null) {
+			if(sesion.equals("true")) {
+				request.getSession().invalidate();
+				response.sendRedirect("/Practica_de_laboratorio_01_Servlets_JSP_y_JDBC/index.html");
+				
+			}
+		}else {
+			
+		// System.out.println("Id del ususario " + request.getSession().getAttribute("userId"));
+		 DaoUsuario userDao = DAOFactory.getFactory().getUsuarioDAO();
+		 user user = userDao.findById(String.valueOf(request.getSession().getAttribute("userId")));
         
-        request.setAttribute("user", user);
-        getServletContext().getRequestDispatcher("/views/jsp/my-agenda.jsp").forward(request, response);
-        //RequestDispatcher dispatcher = request.getRequestDispatcher("/views/jsp/my-agenda.jsp");
-        //dispatcher.forward(request, response);
+		 request.setAttribute("user", user);
+         //System.out.println("Nombre: "+user.getNombre() + " Apellido: "+user.getApellido());
         
-        System.out.println("Nombre: "+user.getNombre() + " Apellido: "+user.getApellido());
+     
+         if (buscarNumero!=null) {
+			DaoTelefono telefono = DAOFactory.getFactory().getTelefonoDAO();
+			user.setTelefono(telefono.findBySearchTelf(user.getCedula(), buscarNumero));
+			
+		}
+         getServletContext().getRequestDispatcher("/jsp/Agenda.jsp").forward(request, response);
+         	
+	
+		}
 	}
 
 	/**

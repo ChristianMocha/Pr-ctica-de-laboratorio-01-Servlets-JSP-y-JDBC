@@ -39,6 +39,44 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 
 <img width="1280" alt="Screen Shot 2020-05-11 at 21 52 11" src="https://user-images.githubusercontent.com/34308608/81633153-adb52800-93d1-11ea-936f-ed11edfe255c.png">
 
+- En este caso para poder iniciar sesion necesitamos pasar el correo asi como la contraseña, en este mismo metodo estamos aplicando un filtro para el logueo, que la aplicación tenga seguridad.
+
+```ruby
+protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+
+		String email = request.getParameter("email");
+		String pass = request.getParameter("passw");
+
+		DaoUsuario userDao = DAOFactory.getFactory().getUsuarioDAO();
+		user user = userDao.findPrsona(email, pass);
+
+		System.out.println("Usuario " + user.toString());
+
+		if (user != null) {
+			System.out.println("Usuario encontrado");
+			HttpSession session = request.getSession(true);
+			System.out.println("Sesion iniciada con el id: " + request.getSession().getId());
+			session.setAttribute("sessionID", String.valueOf(session.getId()));
+
+			session.setAttribute("userId", user.getCedula());
+
+			// System.out.println("Id del ususario " +
+			// request.getSession().getAttribute("personaId"));
+
+			response.sendRedirect("/Practica_de_laboratorio_01_Servlets_JSP_y_JDBC/Agenda");
+
+		} else {
+			System.out.println("Usuario no encontrado");
+			response.sendRedirect("/Practica_de_laboratorio_01_Servlets_JSP_y_JDBC/html/Login.html");
+		}
+
+	}
+
+```
+
 3. Luego que el usuario acaba de iniciar sesion, nos manda a la pagina de agenda, dentro de la agenda podemos agregar mas telefonos a ese usuario asi como tambien se puede eliminar los numeros  o editar los numero, asi como tambien se puede buscar mediante la cedula o el correo, tambien se aplico un metodo para buscar mediante el numero de celular que tenemos agregado dentro de la agenda de ese usuario.
 
 <img width="1280" alt="Screen Shot 2020-05-11 at 21 54 53" src="https://user-images.githubusercontent.com/34308608/81633306-0d133800-93d2-11ea-91fc-4685d9c987df.png">

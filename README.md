@@ -4,6 +4,34 @@
 1. En primer lugar se realizara el crear usuario
 
 <img width="1280" alt="Screen Shot 2020-05-11 at 21 49 00" src="https://user-images.githubusercontent.com/34308608/81633083-75154e80-93d1-11ea-9393-6ab605802517.png">
+- En este metodo creamos dentro de un servlet para poder agragar un telefono a la BD
+```ruby
+protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+		
+		String cedula=request.getParameter("cedula");
+		String nombre=request.getParameter("nombre");
+		String apellido=request.getParameter("apellido");
+		String email=request.getParameter("email");
+		String pass=request.getParameter("passw");
+		
+		DAOFactory.getFactory().createTables();
+	
+		
+        
+		DaoUsuario userDao = DAOFactory.getFactory().getUsuarioDAO();
+        user user = new user(cedula, nombre, apellido, email, pass);
+        if (userDao.create(user)) {
+            response.sendRedirect("/Practica_de_laboratorio_01_Servlets_JSP_y_JDBC/html/Login.html");
+            }else{
+            System.out.println("Usuario No Creado");
+            response.sendRedirect("/Practica_de_laboratorio_01_Servlets_JSP_y_JDBC/html/CreateAccount.html");
+        }
+		
+       
+	}
+  ```
 
 2. Al momento que se  crea el usuario, nos redirecciona a la interfaz del login.
 

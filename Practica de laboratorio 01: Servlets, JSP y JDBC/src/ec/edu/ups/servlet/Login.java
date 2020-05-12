@@ -3,6 +3,7 @@ package ec.edu.ups.servlet;
 import java.io.IOException;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,51 +21,59 @@ import ec.edu.ups.modelo.user;
 @WebServlet("/Login")
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Login() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	public Login() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
-	
-		String email=request.getParameter("email");
-		String pass=request.getParameter("passw");
-		
-		
+
+		String email = request.getParameter("email");
+		String pass = request.getParameter("passw");
+
 		DaoUsuario userDao = DAOFactory.getFactory().getUsuarioDAO();
-        user user =  userDao.findPrsona(email, pass);
-        if (user != null) {
-        	System.out.println("Usuario encontrado");
-        	HttpSession session = request.getSession(true);
-        	System.out.println("Seision iniciada con el id: " + request.getSession().getId());
-        	session.setAttribute("session ID ", String.valueOf(session.getId()));
-        	session.setAttribute("UsuarioId ", user.getCedula());
-        	
-            response.sendRedirect("/Practica_de_laboratorio_01_Servlets_JSP_y_JDBC/jsp/Agenda.jsp");
-            //System.out.println("Usuario Creado");
-            //System.out.println("nombre: "+nombre+" apellido: "+apellido+" cedula: "+cedula+" mail: "+mail+" pass: "+pass);
-        }else{
-            System.out.println("Usuario no encontrado");
-            response.sendRedirect("/Practica_de_laboratorio_01_Servlets_JSP_y_JDBC/html/Login.html");
-        }
-		
+		user user = userDao.findPrsona(email, pass);
+
+		System.out.println("Usuario " + user.toString());
+
+		if (user != null) {
+			System.out.println("Usuario encontrado");
+			HttpSession session = request.getSession(true);
+			System.out.println("Sesion iniciada con el id: " + request.getSession().getId());
+			session.setAttribute("sessionID", String.valueOf(session.getId()));
+
+			session.setAttribute("userId", user.getCedula());
+
+			// System.out.println("Id del ususario " +
+			// request.getSession().getAttribute("personaId"));
+
+			response.sendRedirect("/Practica_de_laboratorio_01_Servlets_JSP_y_JDBC/Agenda");
+
+		} else {
+			System.out.println("Usuario no encontrado");
+			response.sendRedirect("/Practica_de_laboratorio_01_Servlets_JSP_y_JDBC/html/Login.html");
+		}
+
 	}
 
 }

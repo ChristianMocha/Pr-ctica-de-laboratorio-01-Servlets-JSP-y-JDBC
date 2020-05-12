@@ -2,80 +2,322 @@
 <html>
 <head>
 <meta charset="UTF-8">
- 	<!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Optional theme -->
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/css/mdb.min.css" rel="stylesheet">
-   
-    <link href="css/index.css" rel="stylesheet" type="text/css"/>
-    
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+<!-- Optional theme -->
+<!-- Font Awesome -->
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Bootstrap core CSS -->
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+	rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/css/mdb.min.css"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap"
+	rel="stylesheet">
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+
 <title>Inicio</title>
 </head>
 <body>
 
 
-<!--Cabecera-->
-<header>
+	<!--Cabecera-->
+	<header>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark gris row scrolling-navbar fixed-top">
-        <!-- logo -->
-        <div class="col-xs-9 col-sm-8 col-md-4 col-mg-4 letter" >
-            <a href="index.html" id="prin">
-                <img src="img/2.png" height="50px" width="50px" />
-            </a>
-        </div>
-        <!-- Search form -->
-        <form class=" col-xs-8 col-sm-4 col-md-4 col-mg-4 mr-sm-2" id="formulario">
-            <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
-        </form>
-        <!-- Datos extras -->
-        <ul class="nav navbar-nav nav-flex-icons ml-auto col-xs-2 mr-sm-2">
-            <li class="nav-item">
-                <a class="nav-link"><i class="fa fa-envelope"></i> <span
-                        class="clearfix d-none d-sm-inline-block">Contact</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link"><i class="fa fa-comments-o"></i> <span
-                        class="clearfix d-none d-sm-inline-block">Support</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link"  href="html/Login.html"><i class="fa fa-user"></i> <span
-                        class="clearfix d-none d-sm-inline-block">Account</span></a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<!--Cabecera-->
+		<!-- Navbar -->
+		<nav
+			class="navbar navbar-expand-lg navbar-dark gris row scrolling-navbar fixed-top">
+			<!-- logo -->
+			<div class="col-xs-9 col-sm-8 col-md-4 col-mg-4 letter">
+				<a href="index.html" id="prin"> <img src="img/2.png"
+					height="55px" width="55px" />
+				</a>
+			</div>
+			<!-- Search form -->
+			<form class=" col-xs-8 col-sm-4 col-md-4 col-mg-4 mr-sm-4"
+				id="formulario"
+				action="/Practica_de_laboratorio_01_Servlets_JSP_y_JDBC/Search">
+				<input class="form-control my-0 py-1" type="text" name="usuario"
+					placeholder="Search" aria-label="Search" id="buscar">
+			</form>
 
-   
-   
-   
-   
-   
+			<!-- Datos extras -->
+			<ul class="nav navbar-nav nav-flex-icons ml-auto  mr-sm-2">
+				<li class="nav-item"><a class="nav-link"> <i
+						style="font-size: 17px;" class="fa fa-envelope"></i> <span
+						class="clearfix d-none d-sm-inline-block" style="font-size: 17px;">Contact</span></a></li>
+				<li class="nav-item"><a class="nav-link"><i
+						class="fa fa-comments-o"></i> <span
+						class="clearfix d-none d-sm-inline-block" style="font-size: 17px;">Support</span></a></li>
+				<li class="nav-item"><a class="nav-link" href="html/Login.html"><i
+						style="font-size: 17px;" class="fa fa-user"></i> <span
+						class="clearfix d-none d-sm-inline-block" style="font-size: 17px;">Account</span></a></li>
+			</ul>
+		</nav>
+		<div class="ancholetras">
+			<div class="texto">
+				<h2>Agenda Telefonica</h2>
+				<p>Aplicacion de Agenda Telefonica</p>
+			</div>
+		</div>
+		<section class="fondo"></section>
+	</header>
+	<!--Cabecera-->
 
 
- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-    <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/js/mdb.min.js"></script>
-    <script src="js/funcion.js"></script>
+	<section class="wap">
+		<section class="bienvenidos">
+			<h6>Identidad</h6>
+
+
+		</section>
+
+
+		<section class="contenedor-columnas">
+			<div class="columnasx3">
+				<img class="img" alt=""
+					src="https://fayolconsulting.com/wp-content/uploads/2019/05/quienessomos.jpg">
+				<h4>Quienes Somos</h4>
+				<p>Somos profesionales especializados en diferentes áreas
+					estratégicas para el posicionamiento empresarial, con enfoque de
+					talento humano direccionado al desarrollo del ser; altamente
+					capacitados en prestar servicios de consultoría, y asesoría, a
+					empresarios que requieren el apoyo y el acompañamiento integral en
+					toda la estructura empresarial y áreas de la misma</p>
+
+			</div>
+
+			<div class="columnasx3">
+				<img class="img" alt=""
+					src="https://mobirise.com/bootstrap-4-theme/homepage-template/assets/images/aaditya-kalia-332803-4000x4000.jpg">
+				<h4>Misión</h4>
+				<p>Direccionar, Asesorar, Capacitar y Entrenar de manera
+					integral a todo tipo de Empresarios para que adopten las
+					habilidades técnicas y humanas en el control y direccionamiento
+					efectivo de la organización mediante estrategias innovadoras de
+					fácil aplicación y de alto impacto en su productividad y
+					rentabilidad económica y social</p>
+
+			</div>
+
+			<div class="columnasx3">
+				<img class="img" alt=""
+					src="https://mobirise.com/bootstrap-4-theme/homepage-template/assets/images/gerrie-van-der-walt-338444-2000x2000.jpg">
+				<h4>Visión</h4>
+				<p>Ser la empresa líder en el Mercado Nacional de transformación
+					empresarial, con proyección internacional, especializada en el
+					desarrollo integral de las organizaciones con enfoque en el talento
+					humano.</p>
+
+			</div>
+
+		</section>
+
+	</section>
+
+
+
+
+
+
+	<section class="banner-2">
+		<h3>Agenda Telefonica</h3>
+
+	</section>
+
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+
+
+
+	<div class=" todo">
+		<div class="container">
+			<section class="row">
+				<article class="col-md-9">
+					<img alt=""
+						src="https://scontent.fgye8-1.fna.fbcdn.net/v/t1.0-9/83752614_2435907896513424_1781897423333883904_o.jpg?_nc_cat=106&_nc_sid=85a577&_nc_oc=AQnXefA8nl20JTVW_ZwLHS28mag9jMknkbdSEAJ_tZJIIsOmBAamxV0cPcpSE_z13Mg&_nc_ht=scontent.fgye8-1.fna&oh=47000248c6c40a7fefcf4c103ea0cedd&oe=5EDCC627">
+				</article>
+				<article class="col-md-3 art">
+					<h2 class="tituloE">Equipo de trabajo</h2>
+					<p>Christian Ronaldo Mocha Zhingri</p>
+				</article>
+			</section>
+
+		</div>
+	</div>
+
+
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+
+
+	<!-- Footer -->
+	<footer class="page-footer font-small unique-color-dark pt-4">
+
+		<!-- Footer Links -->
+		<div class="container text-center text-md-left">
+
+			<!-- Grid row -->
+			<div class="row">
+
+				<!-- Grid column -->
+				<div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+
+					<!-- Content -->
+					<h5 class="font-weight-bold text-uppercase mb-4">Contenido</h5>
+
+					<p>Se realizara una aplicaion para materia plataformas web, la
+						aplicacion trata sobre un agenda telefonica.</p>
+
+				</div>
+				<!-- Grid column -->
+
+				<hr class="clearfix w-100 d-md-none">
+
+
+				<!-- Grid column -->
+
+				<hr class="clearfix w-100 d-md-none">
+
+				<!-- Grid column -->
+				<div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+					<!-- Contact details -->
+					<h5 class="font-weight-bold text-uppercase mb-4">Contactanos</h5>
+
+					<ul class="list-unstyled">
+						<li>
+							<p>
+								<i class="fas fa-home mr-3"></i> Cuenca
+							</p>
+						</li>
+						<li>
+							<p>
+								<a href="mailto:cuenta@deemail.com"><i
+									class="fas fa-envelope mr-3"></i> letmy.4@hotmail.com 
+							</p> </a>
+
+						</li>
+						<li>
+							<p>
+								<a href="tel:+0969415550"><i class="fas fa-phone mr-3"></i>
+									+ 0969415550</a>
+
+							</p>
+						</li>
+					</ul>
+
+				</div>
+				<!-- Grid column -->
+
+				<hr class="clearfix w-100 d-md-none">
+
+				<!-- Grid column -->
+				<div class="col-md-2 col-lg-2 text-center mx-auto my-4 ">
+
+					<!-- Social buttons -->
+					<h5 class="font-weight-bold text-uppercase mb-4">Siguenos</h5>
+
+
+					<!-- Facebook -->
+					<a href="https://www.facebook.com/christian.mocha.7"
+						target="_black" class="fb-ic"> <i
+						class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x">
+					</i>
+					</a>
+					<!--Instagram-->
+					<a href="https://www.instagram.com/crissmocha/" target="_black"
+						class="ins-ic"> <i
+						class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x">
+
+					</i> <!--Youtube--> <a
+						href="https://www.youtube.com/channel/UCE6WWxqqeDaNhqOaRFSNXrA?view_as=subscriber"
+						target="_black" class="ins-ic"><i
+							class="fab fa-youtube fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+				</div>
+				<!-- Grid column -->
+
+
+
+			</div>
+			<!-- Grid row -->
+
+		</div>
+		<!-- Footer Links -->
+
+		<!-- Copyright -->
+		<div class="footer-copyright text-center py-3">
+			© 2020 Copyright: <a href="https://mdbootstrap.com/"> Christian
+				Ronaldo Mocha Zhingri</a>
+		</div>
+		<!-- Copyright -->
+
+	</footer>
+	<!-- Footer -->
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
+	<!-- JQuery -->
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/js/mdb.min.js"></script>
+	<script src="js/funcion.js"></script>
 
 </body>
 </html>

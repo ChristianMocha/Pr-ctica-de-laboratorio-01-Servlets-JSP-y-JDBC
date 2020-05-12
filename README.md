@@ -6,6 +6,7 @@
 <img width="1280" alt="Screen Shot 2020-05-11 at 21 49 00" src="https://user-images.githubusercontent.com/34308608/81633083-75154e80-93d1-11ea-9393-6ab605802517.png">
 - En este metodo creamos dentro de un servlet para poder agragar un telefono a la BD
 ```ruby
+
 protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
@@ -31,6 +32,8 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 		
        
 	}
+	
+	
   ```
 
 2. Al momento que se  crea el usuario, nos redirecciona a la interfaz del login.
